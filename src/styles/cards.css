@@ -1,4 +1,103 @@
-.card-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
-.card-meta{display:flex;gap:6px;align-items:center}
-.card-grid{display:grid;gap:12px;grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));}
-.card-links{display:flex;gap:12px;margin-top:8px}
+.section-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  gap: 8px;
+}
+
+.section-content {
+  padding: 12px;
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-cards {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+/* Mobile and Tablet */
+@media (max-width: 767px) {
+  .section-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(140px, auto));
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .section-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(140px, auto));
+  }
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  background: linear-gradient(transparent, rgba(255,255,255,0.95) 50%);
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #666;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  width: 100%;
+}
+
+.card-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  margin-bottom:6px
+}
+
+.card-meta{
+  display:flex;
+  gap:6px;
+  align-items:center
+}
+
+.card-links{
+  display:flex;
+  gap:12px;
+  margin-top:8px
+}

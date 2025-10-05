@@ -1,19 +1,12 @@
 import React from "react";
 import "../styles/collapsibles.css";
-import CollapsibleColumn from "./CollapsibleColumn";
+import SectionBlock from "./SectionBlock";
 
-export default function CollapsiblesPanel({ columns, visibleRows }) {
+export default function SectionsPanel({ columns, visibleRows }) {
   const excluded = ["Tier", "Act"];
   const cols = columns.filter(
     (c) => !excluded.some((ex) => new RegExp("^" + ex + "$", "i").test(c))
   );
-
-  function expandAll() {
-    document.querySelectorAll("details.comp").forEach((d) => (d.open = true));
-  }
-  function collapseAll() {
-    document.querySelectorAll("details.comp").forEach((d) => (d.open = false));
-  }
 
   function onGoToRow(rowRef, edit = false) {
     const el = document.getElementById(rowRef);
@@ -31,7 +24,7 @@ export default function CollapsiblesPanel({ columns, visibleRows }) {
   return (
     <section className="columns-grid">
       {cols.map((col) => (
-        <CollapsibleColumn
+        <SectionBlock
           key={col}
           col={col}
           visibleRows={visibleRows}

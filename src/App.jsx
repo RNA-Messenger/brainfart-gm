@@ -4,7 +4,7 @@ import HeaderBar from "./components/HeaderBar";
 import UploadBar from "./components/UploadBar";
 import FiltersBar from "./components/FiltersBar";
 import StatsBar from "./components/StatsBar";
-import CollapsiblesPanel from "./components/CollapsiblesPanel";
+import SectionsPanel from "./components/SectionsPanel";
 import DataTable from "./components/DataTable";
 import NpcForm from "./components/NpcForm";
 import NpcLibrary from "./components/NpcLibrary";
@@ -182,7 +182,7 @@ export default function App() {
               total: rows.length,
               byStatus: STATUS_OPTIONS.reduce((acc, s) => { acc[s] = rows.filter(r => r.Status === s).length; return acc; }, {})
             }} />
-            <CollapsiblesPanel
+            <SectionsPanel
               columns={columns}
               visibleRows={visibleRows}
               findNpcByNameToken={findNpcByNameToken}
