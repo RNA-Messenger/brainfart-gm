@@ -1,0 +1,3 @@
+.form-row{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap}
+.form-col{flex:1}
+.form-label{color:var(--muted);font-size:12px;margin-bottom:4px;display:block}

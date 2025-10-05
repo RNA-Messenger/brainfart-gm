@@ -1,0 +1,55 @@
+:root{
+  --bg:#f6f7fb;
+  --text:#0f172a;
+  --muted:#64748b;
+  --border:#e2e8f0;
+  --border-strong:#cbd5e1;
+  --white:#fff;
+  --primary:#0f172a;
+  --primary-hover:#111827;
+  --shadow:0 1px 2px rgba(0,0,0,.05);
+  --radius:16px;
+  --radius-sm:12px;
+}
+
+*{box-sizing:border-box}
+html, body, #root{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
+
+.container{max-width:1100px;margin:0 auto;padding:16px;}
+.muted{color:var(--muted);font-size:12px}
+.spacer{flex:1}
+
+header.app-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter: blur(6px);border-bottom:1px solid var(--border);}
+header.app-header .inner{display:flex;gap:8px;align-items:center;padding:12px 16px;}
+
+.card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;}
+.card--tight{padding:12px;}
+.grid{display:grid;gap:12px;grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+
+.btn{border:1px solid var(--border-strong);background:var(--white);padding:8px 12px;border-radius:var(--radius-sm);cursor:pointer;}
+.btn:hover{background:#f8fafc}
+.btn-primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-hover)}
+
+.badge{font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--border-strong);background:var(--white);}
+
+input, select, textarea{width:100%;border:1px solid var(--border-strong);border-radius:10px;padding:6px 8px;background:#fff;color:var(--text);}
+textarea{min-height:36px}
+
+table{width:100%;border-collapse:collapse}
+thead th{position:sticky;top:0;background:#f1f5f9;z-index:1;text-align:left}
+th, td{border-top:1px solid var(--border);padding:8px 12px;vertical-align:top}
+
+details.comp{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden}
+details.comp summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:12px 16px}
+details.comp > .content{padding:0 16px 16px 16px}
+
+img.thumb{width:64px;height:64px;border-radius:12px;object-fit:cover;background:#f1f5f9}
+img.thumb-wide{width:100%;height:220px;object-fit:cover;border-radius:12px}
+
+.glow{box-shadow:0 0 0 3px rgba(99,102,241,.5)!important}
+.tabs button{margin-right:6px}
+
+.hidden{display:none}

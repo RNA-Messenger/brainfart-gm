@@ -1,0 +1,4 @@
+.card-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.card-meta{display:flex;gap:6px;align-items:center}
+.card-grid{display:grid;gap:12px;grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));}
+.card-links{display:flex;gap:12px;margin-top:8px}
